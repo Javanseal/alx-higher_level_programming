@@ -1,21 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    """Prints a matrix of integers
-
-    Args:
-        matrix: a matrix
-    """
-
-        if not matrix:
+    for i in matrix:
+        l = 1
+        for j in i:
+            if l == len(i):
+                print("{:d}".format(j), end="")
+            else:
+                print("{:d}".format(j), end=" ")
+            l = l + 1
         print()
-    else:
-    
-        for row in matrix:
-                for item in row:
-                                if row.index(item) != len(row) - 1:
-                    endspace = " "
-                else:
-                    endspace = ""
-                
-                print("{:d}".format(item), end=endspace)
-            print()
