@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-number_of_lines = __import__('1-number_of_lines').number_of_lines
+def read_file(filename=""):
+    """ function that reads a text file (UTF8) and prints it to stdout """
 
-filename = "my_file_0.txt"
-nb_lines = number_of_lines(filename)
-print("{} has {:d} lines".format(filename, nb_lines))
+    with open(filename, encoding='utf-8') as f:
+        print(f.read(), end="")
